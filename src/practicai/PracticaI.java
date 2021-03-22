@@ -52,6 +52,9 @@ public class PracticaI {
                     break;
                 case 3:
                     AccionesDispositivos(dispositivo);
+                    break;
+                case 4:
+                    AccionesExternas(dispositivo);
             }
         }
     }
@@ -445,4 +448,30 @@ public class PracticaI {
 
     }
 
+    public static void AccionesExternas(Dispositivos[] dispositivo) {
+        Scanner entrada = new Scanner(System.in);
+        
+        
+        System.out.print("------Acciones Externas de Dispositivos------"
+                + "\n\nSeleccione el tipo de accion a realizar\n\n1. Llamada teléfonica"
+                + "\n2. Mensaje\n3. Notificacion\n\nSeleccione accion a realizar: ");
+        int desicion = entrada.nextInt();
+        
+        switch(desicion){
+            case 1:
+                System.out.print("Digite el numero que desea llamar: ");
+                int numero= entrada.nextInt();
+                
+                for(int i = 0; i<dispositivo.length; i++){
+                    if(dispositivo[i] == null){
+                        break;
+                    }
+                }
+                
+                break;
+        }
+        
+    }
+    
+    
 }
